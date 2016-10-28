@@ -8,10 +8,14 @@
  * Controller of the webContentApp
  */
 angular.module('webContentApp')
-  .controller('MainCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+  .controller('MainCtrl' , function ($scope, $location) {
+    
+    $scope.loginPage = function() {
+    	$location.path('login');
+    }
+    
+    $scope.registerPage = function() {
+    	$location.path('register');
+    }
+    
   });
